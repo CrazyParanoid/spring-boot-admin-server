@@ -1,0 +1,28 @@
+spring.profiles.active: develop
+spring.main.allow-bean-definition-overriding: true
+
+server:
+  port: 8080
+
+spring:
+  security:
+    user:
+      name: "admin"
+      password: "admin123"
+  application:
+    name: admin-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL}
+    register-with-eureka: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
